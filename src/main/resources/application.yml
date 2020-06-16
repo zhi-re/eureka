@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+
+spring:
+  application:
+    name: Eureka-Server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+#      defaultZone: http://localhost:8081/eureka/
+      defaultZone: http://localhost:8080/eureka/
+  server:
+    enable-self-preservation: false
+#    eviction-interval-timer-in-ms: 4000
